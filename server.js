@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Enter the Page Access Token from the previous step
-const FACEBOOK_PAGE_ACCESS_TOKEN = 'EAAGmFKkLokwBAOXizz2MoQwRQRQg1EXbc5iMlzXsRpSCKkPhLc8W0c3DzroXTQRmk6oHKss4YKFGfxDW3rhW9JZCTYTgGE5H2yRFBZAORAFhmnD2YBMsCDc07ttfjw6zOXIIjqQkF6CCM43j7NOtblKBwkJA7ivZADtie5yj7ZBchNdpAX2UjGInG1HpNMgZD';
+const FACEBOOK_PAGE_ACCESS_TOKEN = 'EAAG3ehITNxYBAPuH0m06EupRBp1a2ciZCydavYvc2DQp7fbozV6AcYvzrvAW5Qd0XZCWfJQQXecXkWtSt2MhyWh0jHXzwSxak8FrZCgrWQQ29XsLnYH10e1gWCkH4ZA3AMdbzbgPPzTFQMSfgWQT38GVrKZC64xojvNu8RDsLhqtSIRdtqbfs';
 
 // Accept JSON POST body
 app.use(bodyParser.json());
@@ -28,7 +28,7 @@ app.get('/webhook', (req, res) => {
 // POST /webhook
 app.post('/webhook', async (req, res) => {
     // Facebook will be sending an object called "entry" for "leadgen" webhook event
-    console.log('Got webhook lead')
+    console.log('Got webhook lead gen test')
     if (!req.body.entry) {
         return res.status(500).send({ error: 'Invalid POST data received' });
     }
